@@ -23,5 +23,3 @@ class KittensController < ApplicationController
       
 
     end
-
-end
