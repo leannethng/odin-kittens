@@ -1,0 +1,23 @@
+<h1>KittenDB</h1>
+
+<p>Catalog your kittens here!</p>
+
+<table>
+  <tr>
+    <th>Kitten Name</th>
+    <th>Age</th>
+    <th>Cuteness</th>
+    <th>Softness</th>
+  </tr>
+
+  <% @kittens.each do |kitten| %>
+  <tr>
+    <td><%= kitten.name %></td>
+    <td><%= kitten.age %></td>
+    <td><%= kitten.cuteness %></td>
+    <td><%= kitten.softness%></td>
+
+  </tr>
+  <% end %>
+
+</table>
