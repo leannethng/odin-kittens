@@ -4,10 +4,9 @@
 
 <table>
   <tr>
-    <th>Kitten Name</th>
-    <th>Age</th>
-    <th>Cuteness</th>
-    <th>Softness</th>
+    <% @kitten_columns.each do |col_name| %>
+    <th><%= col_name.capitalize %></th>
+    <% end %>
   </tr>
 
   <% @kittens.each do |kitten| %>
