@@ -72,3 +72,7 @@ That all got the `index` up and running!
 ```ruby
  <p><%= @kitten.name %> is <%= pluralize(@kitten.age, "year")%> old!</p>
 ```
+
+## New and Create
+
+- New is kind of like the view and create is the action that pushes the change to the db same with edit and update

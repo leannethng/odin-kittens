@@ -7,13 +7,21 @@ class KittensController < ApplicationController
   end
 
   def show
+    # because we are passing in the @kitten in the before action from the private params, we only have to say what format we want the response in here
+  
     respond_to do |format|
       format.html
-    end 
+    end
   end
 
   def new
    @kitten = Kitten.new
+  end
+
+  def edit
+    respond_to do |format|
+      format.html
+    end
   end
 
   def create
@@ -23,9 +31,28 @@ class KittensController < ApplicationController
       redirect_to @kitten
     else
       render 'new'
+    end  
+  end
+
+  def update
+    @kitten = Kitten.find(params[:id])
+    # Redirect back to the show kitten
+    if @kitten.update(kitten_params)
+      redirect_to @kitten
+    else
+      render 'edit'
     end
   end
+   
+  def destroy
+    @kitten = Kitten.find(params[:id])
+    @kitten.destroy
+    # redirecting back to the index
+    respond_to do |format|
+      format.html { redirect_to kittens_path }
+    end
     
+  end
 
 
   private
