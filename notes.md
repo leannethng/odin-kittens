@@ -66,3 +66,9 @@ That all got the `index` up and running!
 
 - Created a page for show but realized that I could probably make the info more efficient. This was harder than anticipated and I started diving into the world of hashes.
 - I created a private section in my controller to hold the pulling of data from the db but I need ot do more work to understand how to map over the data as I don't think I quite have that logic down yet.
+
+### Pluralize
+
+```ruby
+ <p><%= @kitten.name %> is <%= pluralize(@kitten.age, "year")%> old!</p>
+```

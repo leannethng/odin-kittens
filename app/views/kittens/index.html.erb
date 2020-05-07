@@ -4,6 +4,7 @@
 
 <table>
   <tr>
+    <%# Trying to iterate over the column names %>
     <% @kitten_columns.each do |col_name| %>
     <th><%= col_name.capitalize %></th>
     <% end %>
@@ -15,7 +16,7 @@
     <td><%= kitten.age %></td>
     <td><%= kitten.cuteness %></td>
     <td><%= kitten.softness%></td>
-
+    <td><%= link_to 'Show Kitten', kitten_path(kitten) %></td>
   </tr>
   <% end %>
 

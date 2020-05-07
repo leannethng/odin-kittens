@@ -1,6 +1,6 @@
 <div>
-  <p><%= @kitten.name %></p>
-  <p><%= @kitten.age %></p>
-  <p><%= @kitten.cuteness %></p>
-  <p><%= @kitten.softness%></p>
+  <%# Using pluralize to say year or years depending on age %>
+  <p><%= @kitten.name %> is <%= pluralize(@kitten.age, "year")%> old!</p>
+  <p>They are <strong><%= @kitten.cuteness %></strong> on the cuteness scale and <strong><%= @kitten.softness%></strong> in softness</p>
+  <%= link_to 'All Kittens', kittens_path %>
 </div>

@@ -13,6 +13,7 @@ class KittensController < ApplicationController
   end
 
   private
+
     def get_kitten
       @kitten = Kitten.find(params[:id])
     end  
@@ -20,6 +21,5 @@ class KittensController < ApplicationController
     def get_kitten_columns
       kitten_keys = [:name, :age, :cuteness, :softness]
       @kitten_columns = kitten_keys
-      
-
     end
+end
