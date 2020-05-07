@@ -28,8 +28,10 @@ class KittensController < ApplicationController
     @kitten = Kitten.new(kitten_params)
     # if the save doesn't validate we render the form through 'new'
     if @kitten.save
+      flash[:success] = "You have created #{@kitten.name}."
       redirect_to @kitten
     else
+      flash.now[:error] = "You didn't add a new kitten."
       render 'new'
     end  
   end
@@ -38,8 +40,10 @@ class KittensController < ApplicationController
     @kitten = Kitten.find(params[:id])
     # Redirect back to the show kitten
     if @kitten.update(kitten_params)
+      flash[:success] = "You have updated #{@kitten.name}."
       redirect_to @kitten
     else
+      flash.now[:error] = "You have not updated #{@kitten.name}."
       render 'edit'
     end
   end
@@ -47,6 +51,7 @@ class KittensController < ApplicationController
   def destroy
     @kitten = Kitten.find(params[:id])
     @kitten.destroy
+    flash[:success] = "You have deleted #{@kitten.name}."
     # redirecting back to the index
     respond_to do |format|
       format.html { redirect_to kittens_path }
