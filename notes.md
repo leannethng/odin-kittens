@@ -1,4 +1,4 @@
-#Rails HTML-producing back end AND an API
+# Rails HTML-producing back end AND an API
 
 ## Setting up the base
 
@@ -76,3 +76,17 @@ That all got the `index` up and running!
 ## New and Create
 
 - New is kind of like the view and create is the action that pushes the change to the db same with edit and update
+
+### Delete
+
+- This wasn't working as shown in the tutorial, I think it was because I was using the `before_action` so I read that wrapping the redirect in a format might help and it did seem to do the trick.
+
+```ruby
+    respond_to do |format|
+      format.html { redirect_to kittens_path }
+    end
+```
+
+### Flash
+
+- I have a few flashes working now and they render in the layout `application.html.erb` file. They do not however seem to disappear. I might need to add functionality to click to dismiss.

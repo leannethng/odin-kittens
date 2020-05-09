@@ -31,7 +31,7 @@ class KittensController < ApplicationController
       flash[:success] = "You have created #{@kitten.name}."
       redirect_to @kitten
     else
-      flash.now[:error] = "You didn't add a new kitten."
+      flash.now[:errors] = @kitten.errors.full_messages.to_sentence
       render 'new'
     end  
   end
