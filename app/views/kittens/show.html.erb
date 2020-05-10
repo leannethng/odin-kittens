@@ -1,4 +1,4 @@
-<div class="pa4">
+<div class="container">
   <p><%= link_to 'Back to all Kittens', kittens_path, :class => 'f6 link dim br2 ba ph3 pv2 mb2 dib dark-green'  %></p>
   <%# Using pluralize to say year or years depending on age %>
   <p><%= @kitten.name %> is <%= pluralize(@kitten.age, "year")%> old!</p>
