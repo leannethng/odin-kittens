@@ -14,7 +14,7 @@
 
 <body class="sans-serif">
   <% flash.each do |key, value| %>
-  <%= content_tag :div, value, class: "flash #{key}" %>
+  <%= content_tag :div, value, class: "flash #{key} flex items-center justify-center pa4 bg-washed-green" %>
   <% end %>
   <% flash.clear %>
 
