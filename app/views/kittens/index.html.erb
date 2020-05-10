@@ -1,26 +1,33 @@
-<h1>KittenDB</h1>
+<div class="pa4">
+  <h1>KittenDB</h1>
 
-<p>Catalog your kittens here!</p>
-<%= link_to 'New Kitten', new_kitten_path %>
-<table>
-  <tr>
-    <%# Trying to iterate over the column names %>
-    <% @kitten_columns.each do |col_name| %>
-    <th><%= col_name.capitalize %></th>
-    <% end %>
-  </tr>
-
-  <% @kittens.each do |kitten| %>
-  <tr>
-    <td><%= kitten.name %></td>
-    <td><%= kitten.age %></td>
-    <td><%= kitten.cuteness %></td>
-    <td><%= kitten.softness%></td>
-    <td><%= link_to 'Show', kitten_path(kitten) %></td>
-    <td><%= link_to 'Delete', kitten_path(kitten), 
+  <p>Catalog your kittens here!</p>
+  <div class="h3">
+    <%= link_to 'New Kitten', new_kitten_path, :class => 'f6 link dim br2 ph3 pv2 mb2 dib white bg-dark-green washed-green' %>
+  </div>
+  <table class="f6 w-100 mw8 center" cellspacing="0">
+    <tr>
+      <%# Trying to iterate over the column names %>
+      <% @kitten_columns.each do |col_name| %>
+      <th class="fw6 bb b--black-20 tl pb3 pr3 bg-white"><%= col_name.capitalize %></th>
+      <% end %>
+    </tr>
+    <tbody class="lh-copy">
+      <% @kittens.each do |kitten| %>
+      <tr>
+        <td class="pv3 pr3 bb b--black-20"><%= kitten.name %></td>
+        <td class="pv3 pr3 bb b--black-20"><%= kitten.age %></td>
+        <td class="pv3 pr3 bb b--black-20"><%= kitten.cuteness %></td>
+        <td class="pv3 pr3 bb b--black-20"><%= kitten.softness%></td>
+        <td class="w1 center"><%= link_to 'Show', kitten_path(kitten), :class => 'f6 link dim br2 ba ph3 pv2 mb2 dib black'  %></td>
+        <td class="w1 center"><%= link_to 'Delete', kitten_path(kitten), 
               method: :delete,
-              data: { confirm: 'Are you sure?'} %></td>
-  </tr>
-  <% end %>
+              data: { confirm: 'Are you sure?'},
+              :class => 'f6 link dim br2 ba ph3 pv2 mb2 dib black' %></td>
+      </tr>
+      <% end %>
+    </tbody>
 
-</table>
+  </table>
+
+</div>
