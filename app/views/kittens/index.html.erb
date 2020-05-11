@@ -1,9 +1,11 @@
-<div class="container">
-  <h1>KittenDB</h1>
-
+<div class="jumbotron jumbotron-fluid pl-5 ">
+  <h1 class="display-4 ">KittenDB</h1>
   <p>Catalog your kittens here!</p>
+
+</div>
+<div class="container">
   <div class="h3">
-    <%= link_to 'New Kitten', new_kitten_path, :class => 'f6 link dim br2 ph3 pv2 mb2 dib white bg-dark-green washed-green' %>
+    <%= link_to 'New Kitten', new_kitten_path, :class => "btn btn-outline-secondary" %>
   </div>
   <table class="f6 w-100 mw8 center" cellspacing="0">
     <tr>
@@ -19,11 +21,12 @@
         <td class="pv3 pr3 bb b--black-20"><%= kitten.age %></td>
         <td class="pv3 pr3 bb b--black-20"><%= kitten.cuteness %></td>
         <td class="pv3 pr3 bb b--black-20"><%= kitten.softness%></td>
-        <td class="w1 center"><%= link_to 'Show', kitten_path(kitten), :class => 'f6 link dim br2 ba ph3 pv2 mb2 dib dark-green'  %></td>
-        <td class="w1 center"><%= link_to 'Delete', kitten_path(kitten), 
+        <td class="w1 center"><%= link_to 'Show', kitten_path(kitten), :class => 'btn btn-outline-secondary'  %></td>
+        <td><%= link_to 'Delete', kitten_path(kitten), 
               method: :delete,
               data: { confirm: 'Are you sure?'},
-              :class => 'f6 link dim br2 ba ph3 pv2 mb2 dib dark-green' %></td>
+              :class => 'btn btn-outline-secondary' 
+              %></td>
       </tr>
       <% end %>
     </tbody>

@@ -1,9 +1,10 @@
-<h1> Edit Kitten </h1>
+<h1 class="display-4 "> Edit Kitten </h1>
 
 <%= render 'form' %>
 
 <%= link_to 'Delete', kitten_path(@kitten), 
               method: :delete,
-              data: { confirm: 'Are you sure?'} %>
+              data: { confirm: 'Are you sure?'},
+              :class => "btn btn-outline-secondary" %>
 
 <%= link_to 'Back', kittens_path %>

@@ -1,12 +1,12 @@
 <div class="container">
-  <p><%= link_to 'Back to all Kittens', kittens_path, :class => 'f6 link dim br2 ba ph3 pv2 mb2 dib dark-green'  %></p>
+  <p><%= link_to 'Back to all Kittens', kittens_path, :class => "btn btn-outline-secondary"  %></p>
   <%# Using pluralize to say year or years depending on age %>
   <p><%= @kitten.name %> is <%= pluralize(@kitten.age, "year")%> old!</p>
   <p>They are <strong><%= @kitten.cuteness %></strong> on the cuteness scale and <strong><%= @kitten.softness%></strong> in softness</p>
 
 
-  <p><%= link_to 'Edit Kitten', edit_kitten_path(@kitten), :class => 'f6 link dim br2 ba ph3 pv2 mb2 dib dark-green' %></p>
+  <p><%= link_to 'Edit Kitten', edit_kitten_path(@kitten), :class => "btn btn-outline-secondary" %></p>
   <td><%= link_to 'Delete', kitten_path(@kitten), 
               method: :delete,
-              data: { confirm: 'Are you sure?'}, :class => 'f6 link dim br2 ba ph3 pv2 mb2 dib dark-green' %></td>
+              data: { confirm: 'Are you sure?'}, :class => "btn btn-outline-secondary" %></td>
 </div>
