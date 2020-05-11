@@ -7,11 +7,7 @@
 //= require("turbolinks").start()
 //= require("@rails/activestorage").start()
 //= require("channels")
-//= require jquery3
-//= require jquery_ujs
-//= require popper
-//= require bootstrap-sprockets
-//= require("bootstrap/dist/js/bootstrap")
+
 //= require_tree .
 
 import "bootstrap"

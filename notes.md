@@ -90,3 +90,16 @@ That all got the `index` up and running!
 ### Flash
 
 - I have a few flashes working now and they render in the layout `application.html.erb` file. They do not however seem to disappear. I might need to add functionality to click to dismiss.
+
+## Bootstrap vs tachyons
+
+- I originally tried tachyons however I felt that the fewer classes of bootstrap might work better for getting the erb fields set up. I think with tachyons you'd want to create each component and import it in which is great however for this project I just want to get some basic styling set up.
+
+- Will explore Tachyons more though as I really like that system.
+
+- Set up bootstrap using this tutorial [Rails and Bootstrap](https://medium.com/@biancapower/how-to-add-bootstrap-4-to-a-rails-5-app-650118459a1e)
+- I was struggling to get it to work so installed bootstrap via yarn [Use yarn to add Bootstrap](https://www.mashrurhossain.com/blog/rails6bootstrap4)
+
+- This method got the JS to work.
+
+-
