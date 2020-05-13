@@ -12,13 +12,21 @@
   <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
 </head>
 
-<body class="sans-serif">
+<body>
+  <%# The alert for all messages and errors %>
   <% flash.each do |key, value| %>
-  <%= content_tag :div, value, class: "flash #{key} flex items-center justify-center pa4 bg-washed-green" %>
-  <% end %>
-  <% flash.clear %>
+  <%= content_tag :div, class: "flash #{key} alert alert-warning alert-dismissible fade show", role: "alert" do %>
+  <%= value %>
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+    <% end %>
+    <% end %>
 
-  <%= yield %>
+    <% flash.clear %>
+
+    <%= yield %>
+
+    <%= yield %>
 </body>
 
 </html>
