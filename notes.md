@@ -6,6 +6,8 @@
 
   `rails new app-name -T -d postgresql`
 
+- Navigate into the folder
+
 - Then create the database with: `rake db:create`
 
 ## Creating the model
